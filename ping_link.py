@@ -6,8 +6,8 @@ from datetime import datetime
 #       Função para pingar o ip
 #---------------------------------------------------------------------------------------------------------------
 def myping(host):
-    #response = os.system("ping -c 1 -s 1 -q " + host)
-    response = os.system("ping -n 1 -l 1 " + host)
+    #response = os.system("ping -c 1 -s 1 -q " + host)  #Linux ping
+    response = os.system("ping -n 1 -l 1 " + host) #Windows Ping
     if response == 0:
         return True
     else:
